@@ -15,5 +15,11 @@ public class Aplicacao {
         Retangulo r = new Retangulo();
 
         System.err.println(r.calcularArea());
+        System.out.println(r.largura());
+
+        Retangulo r2 = Retangulo.create(50.0);
+
+        System.out.println(r2.calcularArea());
+        System.out.println(r2);
     }
 }
