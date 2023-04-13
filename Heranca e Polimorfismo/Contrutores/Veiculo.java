@@ -1,0 +1,16 @@
+public class Veiculo {
+    protected String marca;
+
+    // public Veiculo() {
+    // System.out.println("Veiculo()");
+    // }
+
+    public Veiculo(String marca) {
+        this.marca = marca;
+        System.out.println("Veiculo(String)");
+    }
+
+    public String getMarca() {
+        return this.marca;
+    }
+}
