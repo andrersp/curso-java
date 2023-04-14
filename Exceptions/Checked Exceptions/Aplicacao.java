@@ -5,9 +5,16 @@ public class Aplicacao {
 
         try {
             banco.realizarOperacao();
-        } catch (Exception e) {
-            System.out.println("Erro ao realizar operacao: " + e.getMessage());
+        } catch (BancoException e) {
+
+            System.out.printf("Ocorreu um erro: %s\n",
+                    e.getMessage());
+            System.out.println(e.getCause());
+
         }
+        // } catch (Exception e) {
+        // System.out.println("Ocorreu um erro");
+        // }
 
     }
 }

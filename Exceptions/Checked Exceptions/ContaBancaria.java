@@ -5,13 +5,13 @@ public class ContaBancaria {
         this.saldo = saldo;
     }
 
-    public void sacar(double valor) throws Exception {
+    public void sacar(double valor) throws ValorNegativoException, SaldoInsuficienteException {
 
         if (valor <= 0) {
-            throw new Exception("O valor para saque é negativo");
+            throw new ValorNegativoException(valor);
         }
         if (saldo - valor < 0) {
-            throw new Exception("Saldo insuficiente");
+            throw new SaldoInsuficienteException(valor, this.saldo);
 
         }
 
